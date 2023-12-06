@@ -14,9 +14,9 @@ class _HomeScreenState extends State<HomeScreen> {
   final response =
       await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts"));
   if (response.statusCode == 200) {
-    List<dynamic> rawData = json.decode(response.body);
-    List<Map<String, dynamic>> data = rawData.cast<Map<String, dynamic>>();
-    return data;
+ List<Map<String, dynamic>> data = json.decode(response.body).cast<Map<String, dynamic>>();
+     return data;
+   
   } else {
     throw Exception("failed to load data");
   }
