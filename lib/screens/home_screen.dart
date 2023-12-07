@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Api sy khud laarhy hain bhai"),
+        title: Text("Api sy khud laarhy hain data bhai"),
       ),
       body: FutureBuilder(
         future: fetchposts(),
